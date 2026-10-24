@@ -1,3 +1,5 @@
+#!/bin/env bash
+
 # SimonSed - a wrapper for Sed.
 # This library has many functions to simplify usage of sed.
 SimonSed_Version="26.10"
