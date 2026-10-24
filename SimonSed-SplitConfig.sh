@@ -1,4 +1,15 @@
 #!/bin/env bash
+# SimonSed - a wrapper for Sed.
+# This library has many functions to simplify usage of sed.
+
+# Last Updated: Fri, Oct 23, 2026
+
+# ShellCheck: Disable color warnings.
+# shellcheck disable=SC2154
+
+
+SimonSed_Version="26.10"
+
 
 ### Insert SplitConfig calls here ###
 
