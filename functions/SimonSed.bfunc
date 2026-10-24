@@ -1,0 +1,85 @@
+#!/bin/env bash
+
+#################################################################################################
+# Define Display Functions Library #                                                      			#
+#################################################################################################
+
+function DisplayLine() {
+	echo " ${brightblue}--------------------------------------------------${reset} "
+}
+
+function DisplayLine_U() {
+        echo " ${brightblue}__________________________________________________${reset} "
+}
+
+
+function NewLine() {
+	echo " "
+}
+
+function NewLineCinema() {
+	NewLine
+	DisplayLine
+	NewLine
+}
+
+function DisplayBanner() {
+	echo " ${brightyellow} $0 - Version $0_Version ${reset} "
+	# DisplayLine
+	echo " ${brightblue} Git Status Of Directories Is Displayed Below: ${reset}"
+}
+
+
+function Usage() {
+  SimonSed_DisplayBanner
+  echo "Usage: $0 --replace-string=[string_to_replace] [replacement_string] [FILE] - Replace a specified string within a file."
+  echo "Usage: $0 --strip-string=[string] [FILE] - Strip a specified string from a file."
+  echo "Usage: $0 --trim-whitespace [FILE] - Trim whitespace from a file."
+  echo "Usage: $0 --strip-lead-characters=[number of characters] [FILE] - Strip a specified number of lead characters from a file."
+  echo " "
+}
+
+
+#################################################################################################
+# Define SimonSed Functions Library #                                                      			#
+#################################################################################################
+
+### TODO: Add function to replace a specified string with another one.
+
+function Replace_String() {
+  # TODO: Sanity check to prevent empy string via if [ -z ] ?
+  Sed_String_To_Replace="$1"
+  Sed_Replacement_String="$2"
+  # FIXME: Place command here
+   echo "Not Implemented Yet."
+  }
+  
+## TODO:   Add function to strip a specified string $Sed_String.
+
+function Strip_String() {
+  # TODO: Sanity check to prevent empy string via if [ -z ] ?
+  Sed_String_To_Strip="$1"
+  sed 's/$Sed_String_To_Strip //g'
+}
+
+
+# Function to trim leading/trailing whitespace (spaces, tabs, newlines)
+Trim_Whitespace() {
+  local input_string="$1"
+  # Remove leading whitespace (\s* or ^\s*), trailing whitespace (\s*$ or \s*$)
+  sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//' <<< "$input_string"
+}
+
+function Trim_Whitespace_Example() {
+# Example Usage:
+  whitespace_var="   Lots of space before and after   "
+  trimmed_var=$(trim_whitespace "$whitespace_var")
+  echo "Original: '$whitespace_var'"
+  echo "Trimmed:  '$trimmed_var'"
+}
+
+
+function Strip_Lead-Characters() {
+  echo "Not Implemented Yet."
+}
+
