@@ -4,8 +4,11 @@
 
 # Last Updated: Fri, Oct 23, 2026
 
+# ShellCheck: Disable warning of variable files, etc.
+    # shellcheck source=/dev/null
+
 # ShellCheck: Disable color warnings.
-# shellcheck disable=SC2154
+    # shellcheck disable=SC2034,SC2154
 
 
 SimonSed_Version="26.10"
