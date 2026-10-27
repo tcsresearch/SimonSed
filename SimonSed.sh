@@ -98,7 +98,8 @@ function Replace_String() {
 function Strip_String() {
   # TODO: Sanity check to prevent empy string via if [ -z ] ?
   Sed_String_To_Strip="$1"
-  sed 's/$Sed_String_To_Strip //g'
+  # sed 's/$Sed_String_To_Strip //g'
+  sed "s/$Sed_String_To_Replace/$Sed_Replacement_String/g" input_file.txt > output_file.txt
 }
 
 
