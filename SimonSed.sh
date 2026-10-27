@@ -136,7 +136,7 @@ case "$1" in
         Strip_String "$1"
         ;;
     "--trim-whitespace")
-        Trim-WhiteSpace
+        Trim-WhiteSpace "$1"
         ;;
     "--strip-lead-characters")
         Strip_Lead_Characters "$1"
