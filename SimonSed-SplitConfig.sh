@@ -11,7 +11,7 @@
     # shellcheck disable=SC2034,SC2154
 
 
-SimonSed_Version="26.10"
+SimonSed_Version="26.10.1"
 
 
 ### Insert SplitConfig calls here ###
@@ -23,16 +23,16 @@ SimonSed_Version="26.10"
 # Check the value of the first argument ($1)
 case "$1" in
     "--replace-string")
-        Replace_String $1 $2
+        Replace_String "$1" "$2"
         ;;
     "--strip-string")
-        Strip_String $1
+        Strip_String "$1"
         ;;
     "--trim-whitespace")
-        Trim-WhiteSpace
+        Trim-WhiteSpace "$1"
         ;;
     "--strip-lead-characters")
-        Strip_Lead_Characters $1
+        Strip_Lead_Characters "$1"
         ;;
     *)
         Usage
