@@ -89,10 +89,10 @@ function Usage() {
 
 function Replace_String() {
 # Sanity check: If input is empty, return immediately with a failure code
-  if [ -z "$1" "$2" ]; then
+  if [ -z "$1" ] || [ -z "$2" ]; then
     echo "Error: Input string is empty." >&2
     return 1
-  fi
+fi
   
   Sed_String_To_Replace="$1"
   Sed_Replacement_String="$2"
