@@ -8,7 +8,7 @@
 # shellcheck disable=SC2154
 
 
-SimonSed_Version="26.10"
+SimonSed_Version="26.10.1"
 
 #################################################################################################
 # Define Colors Library #                                                                  			#
@@ -130,16 +130,16 @@ function Strip_Lead-Characters() {
 # Check the value of the first argument ($1)
 case "$1" in
     "--replace-string")
-        Replace_String $1 $2
+        Replace_String "$1" "$2"
         ;;
     "--strip-string")
-        Strip_String $1
+        Strip_String "$1"
         ;;
     "--trim-whitespace")
         Trim-WhiteSpace
         ;;
     "--strip-lead-characters")
-        Strip_Lead_Characters $1
+        Strip_Lead_Characters "$1"
         ;;
     *)
         Usage
