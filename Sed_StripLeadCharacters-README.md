@@ -9,7 +9,7 @@ To strip leading characters using sed, use the substitution command s/ anchored 
 
 #### Remove the First N Characters (e.g., first 5 characters)
 
-| Command (Extended Regex) | Command (Standard/Escaped) | How it works |
+| Command <br> (Extended Regex) | Command <br> (Standard/Escaped) | How it works |
 | :--- | :--- | :--- |
 | sed -E 's/^.{5}//' filename | ' sed 's/^.\{5\}//' filename | {5} matches the preceding character class (.) five times from the beginning of the line. |
 
@@ -17,13 +17,13 @@ To strip leading characters using sed, use the substitution command s/ anchored 
 
 | Command | How it works |
 | :--- | :--- |
-| sed 's/^[ \t]*//' filename | ^[ \t]* matches zero or more space or tab characters right at the beginning of each line and deletes them. Alternatively, use the POSIX character class sed 's/^[[:space:]]*//' filename. |
+| sed 's/^[ \t]*//' filename | ^[ \t]* matches zero or more space or tab characters right at the beginning of each line and deletes them. <br>  &nbsp;&nbsp;&nbsp; Alternatively, use the POSIX character class sed 's/^[[:space:]]*//' filename. |
 
 #### Remove a Specific Leading Character (e.g., # or @)
 
 | Command | How it works |
 | :--- | :--- |
-| sed 's/^#//' filename | Deletes the # character only if it is the very first character of the line. To strip multiple consecutive instances (like ###), use sed 's/^#*//'. |
+| sed 's/^#//' filename | Deletes the # character only if it is the very first character of the line. <br>  &nbsp;&nbsp;&nbsp; To strip multiple consecutive instances (like ###), use sed 's/^#*//'. |
 
 
 Note: By default, sed outputs the modified text to your terminal; add the -i flag (e.g., sed -i 's/^.//' filename) to edit the file directly in place.
