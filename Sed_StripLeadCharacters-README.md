@@ -3,13 +3,13 @@ To strip leading characters using sed, use the substitution command s/ anchored 
 
 #### Remove the First Character
 
-| Command | How it works |
+| Command | How it works &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | :--- | :--- |
 | ``` sed 's/^.//' filename ``` | The dot (.) matches any single character right after the start of the line (^) and replaces it with nothing. |
 
 #### Remove the First N Characters (e.g., first 5 characters)
 
-| Command <br> (Extended Regex) | Command <br> (Standard/Escaped) | How it works |
+| Command &nbsp;&nbsp;&nbsp; <br> &nbsp;&nbsp;&nbsp; (Extended Regex) &nbsp;&nbsp;&nbsp; | Command &nbsp;&nbsp;&nbsp; <br> &nbsp;&nbsp;&nbsp; (Standard/Escaped) &nbsp;&nbsp;&nbsp; | How it works |
 | :--- | :--- | :--- |
 | ``` sed -E 's/^.{5}//' filename ``` | ``` sed 's/^.\{5\}//' filename ``` | ``` {5} ``` matches the preceding character class (.) five times from the beginning of the line. |
 
