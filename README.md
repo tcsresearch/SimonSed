@@ -3,10 +3,9 @@ Simplify usage of the sed utility.
 
 <hr>
 
-### Project Status
-<!-- SHELLCHECK_COMPLIANCE_START -->
-**Shellcheck Date Of Compliance:** Pending execution
-<!-- SHELLCHECK_COMPLIANCE_END -->
+> [!NOTE]
+> **Project Status**
+> <!-- SHELLCHECK_COMPLIANCE_START --> **Shellcheck Date Of Compliance:** 2026-11-24 <!-- SHELLCHECK_COMPLIANCE_END -->
 
 <p> <h4> ShellCheck Compliance </h4>
   :white_check_mark: This code was verified as ShellCheck compliant as of 10/27/2026. <br>
